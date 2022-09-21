@@ -35,10 +35,11 @@ public class A101_TestCase {
     @AfterMethod
             public void teardown () throws InterruptedException {
 
+        /**Test başarıyla tamamlandıktan sonra iki saniye bekler ve tarayıcıyı kapatır. */
+
         Thread.sleep(2000);
 
         driver.quit();
-
 
     }
 
@@ -134,16 +135,16 @@ public class A101_TestCase {
         adresBasligi.sendKeys("Ev adresim");
         Thread.sleep(1000);
 
-        //Alıcı adını girer.
+        //Alıcı adını girer. (Testi ikinci kez çalıştırmanız durumunda lütfen adı ve soyadı değiştirmeyi unutmayın.Yoksa hata veriyor.)
         WebElement ad = driver.findElement(By.xpath("(//input[@type=\"text\"])[6]"));
 
-        ad.sendKeys("Selam");
+        ad.sendKeys("Ali");
         Thread.sleep(1000);
 
         //Alıcı soyadını girer.
         WebElement soyad = driver.findElement(By.xpath("(//input[@type=\"text\"])[7]"));
 
-        soyad.sendKeys("Karam");
+        soyad.sendKeys("Veli");
         Thread.sleep(1000);
 
         //Alıcı telefon numarasını girer.
